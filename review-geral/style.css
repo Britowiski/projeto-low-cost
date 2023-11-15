@@ -1,0 +1,264 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1E3249;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #f62d2d;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    color: #fff;
+}
+
+/* Estilos para a lista de navegação */
+ul {
+    list-style: none;
+}
+
+/* Estilos para os itens da lista de navegação */
+li {
+    display: inline;
+    margin: 0 20px;
+}
+
+/* Estilos para os links do cabeçalho */
+.link-header, .link-review, .link-footer {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+}
+
+.link-header:hover, .link-review:hover, .link-footer:hover {
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+}
+
+
+.titulo-principal{
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 1.6rem 0;
+}
+
+
+
+/* Aplicar a animação à classe .titulo-principal */
+
+
+.titulo-secundario {
+    font-size: 2rem;
+    color: #FFF;
+    margin: 2rem 0;
+}
+
+.config{
+    color: #FFF;
+    font-size: 1rem;
+}
+
+/* Estilos para o container geral */
+/* Estilos para o iframe */
+.container-iframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.container-iframe iframe {
+    width: 90%; /* Usando 90% da largura do contêiner */
+    max-width: 900px; /* Limitando a largura máxima */
+    height: 500px; /* Ajuste a altura conforme necessário para manter a proporção */
+}
+
+/* Ajuste na margem inferior para afastar o texto abaixo do vídeo */
+.container-iframe h4 {
+    margin-bottom: 1rem;
+}
+
+/* Estilos para o botão de compra */
+.container-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.button-85 {
+    background-color: #4CAF50;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    border: none;
+    outline: none;
+    background: #111;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  .link-botao{
+    text-decoration: none !important;
+    color: #FFF;    
+}
+
+/* ESTILIZAÇÃO DO BTN TOP JAVASCRIPT */
+
+#btnTop {
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #7f94ff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#arrow-up {
+    border: solid rgb(30, 0, 255);
+    border-width: 0 7px 7px 0;
+    padding: 5px;
+    display: inline-block;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .titulo-principal {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    .titulo-secundario {
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .config {
+        font-size: 0.9rem;
+    }
+
+    .container-iframe {
+        margin-top: 1rem;
+    }
+
+    .button-85 {
+        padding: 10px 20px;
+    }
+
+    #btnTop {
+        bottom: 2rem;
+        right: 1rem;
+    }
+}
+
+iframe {
+    max-width: 100%;
+    height: 100%;
+}
+
+section img {
+    width: auto;
+    height: 100%;
+}
